@@ -12,7 +12,7 @@ fun pre () : page =
 
 
 
-fun badgeTest () : transaction page =
+fun badgeDemo () : transaction page =
     return
     <xml>
       { pre() }
@@ -27,7 +27,7 @@ fun badgeTest () : transaction page =
 
 
 
-fun buttonTest () : transaction page =
+fun buttonDemo () : transaction page =
     let
         val my_classes = mdl_button :: mdl_js_button :: mdl_button__fab :: mdl_button__colored :: []
     in
@@ -42,7 +42,7 @@ fun buttonTest () : transaction page =
         </xml>
     end
 
-fun cardTest () : transaction page =
+fun cardDemo () : transaction page =
     return
     <xml>
      { pre() }
@@ -60,5 +60,16 @@ fun cardTest () : transaction page =
           <a class={classfold (mdl_button :: mdl_button__colored :: mdl_js_button :: mdl_js_ripple_effect :: [])}>View Updates </a>
         </div>
       </div>
+    </body>
+    </xml>
+
+
+fun main () : transaction page =
+    return
+    <xml>
+    <body>
+    <a link={badgeDemo ()}>Badge Demo</a><br/>
+    <a link={buttonDemo ()}>Button Demo</a><br/>
+    <a link={cardDemo ()}>Card Demo</a><br/>
     </body>
     </xml>

@@ -8,5 +8,6 @@ rewrite style Mdl/mdl-card--subtitle-text mdl-card__subtitle-text
 rewrite style Mdl/mdl-card--media mdl-card__media
 rewrite style Mdl/mdl-card--supporting-text mdl-card__supporting-text
 rewrite style Mdl/mdl-card--actions mdl-card__actions
+rewrite style Mdl/mdl_progress__indeterminate mdl-progress__indeterminate
 
 mdl
