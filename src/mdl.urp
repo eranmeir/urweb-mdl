@@ -1,0 +1,12 @@
+allow url https://storage.googleapis.com/code.getmdl.io/1.0.2/*
+allow url https://fonts.googleapis.com/icon?family=Material+Icons
+script https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js
+rewrite style Mdl/* [-]
+rewrite style Mdl/mdl-card--title mdl-card__title
+rewrite style Mdl/mdl-card--title-text mdl-card__title-text
+rewrite style Mdl/mdl-card--subtitle-text mdl-card__subtitle-text
+rewrite style Mdl/mdl-card--media mdl-card__media
+rewrite style Mdl/mdl-card--supporting-text mdl-card__supporting-text
+rewrite style Mdl/mdl-card--actions mdl-card__actions
+
+mdl
