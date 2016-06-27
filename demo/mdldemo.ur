@@ -5,8 +5,8 @@ fun classfold (xs : list css_class) : css_class = List.foldl classes null xs
 fun pre () : page =
     <xml>
       <head>
-        <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.indigo-pink.min.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css" />
       </head>
     </xml>
 
@@ -64,6 +64,34 @@ fun cardDemo () : transaction page =
     </xml>
 
 
+fun progressDemo () : transaction page =
+      eid <- fresh;
+      buffid <- fresh;
+      return 
+      <xml>
+        { pre() }
+        <body onload={ MdlFfi.setProgress eid 44 } >
+              <div>
+                <h3>Progress bar</h3>
+                <div id={eid} class={classfold ( mdl_js_progress :: mdl_progress :: [])}></div>
+              </div>
+              <div>
+                <h3>Indeterminate</h3>
+                <div class={classfold ( mdl_progress__indeterminate :: mdl_js_progress :: mdl_progress :: [])}></div>
+              </div>
+              <div>
+                <h3>Buffering</h3>
+                <button value="Set buffering" onclick={ fn _ =>
+                                                           MdlFfi.setProgress buffid 33;
+                                                           MdlFfi.setBuffer buffid 88 }/>
+                <div id={buffid} class={classfold ( mdl_js_progress :: mdl_progress :: [])}></div>
+              </div>
+        </body>
+      </xml> 
+
+
+
+
 fun main () : transaction page =
     return
     <xml>
@@ -71,5 +99,7 @@ fun main () : transaction page =
     <a link={badgeDemo ()}>Badge Demo</a><br/>
     <a link={buttonDemo ()}>Button Demo</a><br/>
     <a link={cardDemo ()}>Card Demo</a><br/>
+    <a link={progressDemo ()}>Progress Demo</a><br/>
     </body>
     </xml>
+

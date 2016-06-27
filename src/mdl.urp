@@ -1,6 +1,6 @@
-allow url https://storage.googleapis.com/code.getmdl.io/1.0.2/*
 allow url https://fonts.googleapis.com/icon?family=Material+Icons
-script https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js
+allow url https://code.getmdl.io/1.1.3/material.indigo-pink.min.css
+library mdlFfi
 rewrite style Mdl/* [-]
 rewrite style Mdl/mdl-card--title mdl-card__title
 rewrite style Mdl/mdl-card--title-text mdl-card__title-text
@@ -8,6 +8,6 @@ rewrite style Mdl/mdl-card--subtitle-text mdl-card__subtitle-text
 rewrite style Mdl/mdl-card--media mdl-card__media
 rewrite style Mdl/mdl-card--supporting-text mdl-card__supporting-text
 rewrite style Mdl/mdl-card--actions mdl-card__actions
-rewrite style Mdl/mdl_progress__indeterminate mdl-progress__indeterminate
+rewrite style Mdl/mdl_progress--indeterminate mdl-progress__indeterminate
 
 mdl

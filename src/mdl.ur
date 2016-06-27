@@ -33,6 +33,7 @@ style mdl_card__supporting_text
 style mdl_card__actions
 
 (* Loading *)
+style mdl_progress
 style mdl_js_progress
 style mdl_progress__indeterminate
 style mdl_spinner

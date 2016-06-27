@@ -1,0 +1,7 @@
+script https://code.getmdl.io/1.1.3/material.min.js
+script http://localhost:8080/urweb_mdl.js
+jsFunc MdlFfi.setProgress=setProgress
+jsFunc MdlFfi.setBuffer=setBuffer
+benignEffectful MdlFfi.setProgress
+benignEffectful MdlFfi.setBuffer
+ffi mdlFfi
