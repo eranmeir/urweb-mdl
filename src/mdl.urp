@@ -1,6 +1,7 @@
 allow url https://fonts.googleapis.com/icon?family=Material+Icons
 allow url https://code.getmdl.io/1.1.3/material.indigo-pink.min.css
 library mdlFfi
+file /urweb_mdl.js urweb_mdl.js
 rewrite style Mdl/* [-]
 rewrite style Mdl/mdl-card--title mdl-card__title
 rewrite style Mdl/mdl-card--title-text mdl-card__title-text

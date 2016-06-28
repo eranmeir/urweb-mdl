@@ -1,5 +1,4 @@
 library ../src/mdl
-file /urweb_mdl.js ../src/urweb_mdl.js
 
 $/list
 mdldemo
